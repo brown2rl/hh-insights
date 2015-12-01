@@ -20,6 +20,9 @@ configure :test do
   set :conn_string, 'sqlite3::memory:'
 end
 
+puts "SLACK_CLIENT_ID:  "+ENV["SLACK_CLIENT_ID"]
+puts "SLACK_CLIENT_SECRET:  "+ENV["SLACK_CLIENT_SECRET"]
+
 #OAUTH
 use Rack::Session::Cookie
 use OmniAuth::Builder do
